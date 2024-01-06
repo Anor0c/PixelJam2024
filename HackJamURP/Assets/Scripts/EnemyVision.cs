@@ -20,7 +20,7 @@ public class EnemyVision : MonoBehaviour
     {
         if (target == null)
             return;
-        if (other.gameObject.tag == "Wall")
+        if (other.gameObject.tag == "Wall" || other.gameObject.tag == "Hackable") 
             return;
 
         var targetDir = target.transform.position - canon.position;
