@@ -24,10 +24,14 @@ public class EnemyHackedBehaviour : MonoBehaviour
         enemyInputComponent.notificationBehavior = PlayerNotifications.InvokeCSharpEvents;
         enemyInputAsset.Enable(); 
         enemyMove = gameObject.AddComponent(typeof (PlayerMove)) as PlayerMove;
-        moveAction.performed += enemyMove.OnMove; 
+        moveAction.started += enemyMove.OnMove;
+        moveAction.performed += enemyMove.OnMove;
+        moveAction.canceled += enemyMove.OnMove;
+        hackAction.started += EnemyUnHacked; 
     }
-    public void EnemyUnHacked()
+    public void EnemyUnHacked(InputAction.CallbackContext ctx)
     {
+        enemyInputAsset.Disable(); 
         if (enemyInputComponent != null)
             Destroy(GetComponent<PlayerInput>());
         if (enemyMove != null)

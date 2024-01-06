@@ -14,13 +14,13 @@ public class PlayerHack : MonoBehaviour
  
     public void OnHack(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (ctx.performed)
         {
-            isTryHack = !isTryHack; 
+            isTryHack = true;
         }
+        else
+            isTryHack = false; 
 
-
-        Debug.Log(isTryHack); 
     }
     public void HitboxOrientation(Vector2 _inputDir)
     {
@@ -40,10 +40,8 @@ public class PlayerHack : MonoBehaviour
             return;
         else if (_other.gameObject.TryGetComponent(out EnemyHackedBehaviour _enemyHacked)) 
         {
-            OnHackSuccessful.AddListener(_enemyHacked.EnemyyHacked);
             Debug.Log("hack" + _enemyHacked); 
             OnHackSuccessful.Invoke();
-            isTryHack = false;
             isHackSuccess = true; 
         } 
     }

@@ -44,6 +44,24 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""c42b9c1a-1bcb-47e9-a170-dcd78d6131c8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReloadLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a32eee3-1a70-4d79-97c6-0a4cc4b370f9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -115,12 +133,34 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""250bd029-8cb9-4cde-aeee-f15220fd3f5e"",
+                    ""id"": ""f873baa7-9a4e-4a10-849a-d024667d4f39"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0843364a-677a-4c51-83cb-d03a5448f073"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hack"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f78fca5d-3ce4-498c-ae9d-c01f0592fbf9"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadLevel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -133,6 +173,8 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
         m_Keyboard = asset.FindActionMap("Keyboard", throwIfNotFound: true);
         m_Keyboard_Move = m_Keyboard.FindAction("Move", throwIfNotFound: true);
         m_Keyboard_Hack = m_Keyboard.FindAction("Hack", throwIfNotFound: true);
+        m_Keyboard_Shoot = m_Keyboard.FindAction("Shoot", throwIfNotFound: true);
+        m_Keyboard_ReloadLevel = m_Keyboard.FindAction("ReloadLevel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -196,12 +238,16 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
     private List<IKeyboardActions> m_KeyboardActionsCallbackInterfaces = new List<IKeyboardActions>();
     private readonly InputAction m_Keyboard_Move;
     private readonly InputAction m_Keyboard_Hack;
+    private readonly InputAction m_Keyboard_Shoot;
+    private readonly InputAction m_Keyboard_ReloadLevel;
     public struct KeyboardActions
     {
         private @HackerInput m_Wrapper;
         public KeyboardActions(@HackerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Keyboard_Move;
         public InputAction @Hack => m_Wrapper.m_Keyboard_Hack;
+        public InputAction @Shoot => m_Wrapper.m_Keyboard_Shoot;
+        public InputAction @ReloadLevel => m_Wrapper.m_Keyboard_ReloadLevel;
         public InputActionMap Get() { return m_Wrapper.m_Keyboard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -217,6 +263,12 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
             @Hack.started += instance.OnHack;
             @Hack.performed += instance.OnHack;
             @Hack.canceled += instance.OnHack;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
+            @ReloadLevel.started += instance.OnReloadLevel;
+            @ReloadLevel.performed += instance.OnReloadLevel;
+            @ReloadLevel.canceled += instance.OnReloadLevel;
         }
 
         private void UnregisterCallbacks(IKeyboardActions instance)
@@ -227,6 +279,12 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
             @Hack.started -= instance.OnHack;
             @Hack.performed -= instance.OnHack;
             @Hack.canceled -= instance.OnHack;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
+            @ReloadLevel.started -= instance.OnReloadLevel;
+            @ReloadLevel.performed -= instance.OnReloadLevel;
+            @ReloadLevel.canceled -= instance.OnReloadLevel;
         }
 
         public void RemoveCallbacks(IKeyboardActions instance)
@@ -248,5 +306,7 @@ public partial class @HackerInput: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnHack(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnReloadLevel(InputAction.CallbackContext context);
     }
 }
