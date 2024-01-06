@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof (CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float gravity = 9.81f;
-    [SerializeField] private float deadZone = 0.5f;
+    [SerializeField] private float deadZone = 0.8f;
 
     private CharacterController controller;
 
