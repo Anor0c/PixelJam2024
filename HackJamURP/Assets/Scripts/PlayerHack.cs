@@ -8,24 +8,17 @@ public class PlayerHack : MonoBehaviour
 {
     [SerializeField] private float hitboxOffset = 1.0f;
     [SerializeField]private bool isTryHack = false; 
+    [SerializeField]private bool isHackSuccess = false; 
 
     public UnityEvent OnHackSuccessful;
  
-
-    void Start()
-    {
-        
-    }
     public void OnHack(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
         {
-            isTryHack = true; 
+            isTryHack = !isTryHack; 
         }
-        else
-        {
-            isTryHack = false;
-        }
+
 
         Debug.Log(isTryHack); 
     }
@@ -41,13 +34,17 @@ public class PlayerHack : MonoBehaviour
     }
     private void OnTriggerStay(Collider _other)
     {
-        Debug.Log(_other);            
-           
+        Debug.Log(_other);
+
         if (!isTryHack)
             return;
-        else
+        else if (_other.gameObject.TryGetComponent(out EnemyHackedBehaviour _enemyHacked)) 
         {
-            _other.gameObject.SetActive(false); 
+            OnHackSuccessful.AddListener(_enemyHacked.EnemyyHacked);
+            Debug.Log("hack" + _enemyHacked); 
+            OnHackSuccessful.Invoke();
+            isTryHack = false;
+            isHackSuccess = true; 
         } 
     }
 }
