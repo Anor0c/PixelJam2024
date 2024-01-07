@@ -12,14 +12,15 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float deadZone = 0.8f;
 
     private CharacterController controller;
+    [SerializeField]private EnemyVisionOrient enemy; 
 
-    private Vector2 inputDir;
-    private Vector3 FinalDir;
+    private Vector2 inputDir = Vector2.zero;
+    private Vector3 FinalDir = Vector3.zero;
 
-    public UnityEvent<Vector2> OnInputDirection; 
+    public UnityEvent<Vector2> OnInputDirection;
     void Start()
     {
-        controller = GetComponent<CharacterController>(); 
+        controller = GetComponent<CharacterController>();
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
