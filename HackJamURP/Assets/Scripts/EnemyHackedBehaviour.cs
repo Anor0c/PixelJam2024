@@ -26,7 +26,7 @@ public class EnemyHackedBehaviour : MonoBehaviour
             vision = GetComponentInChildren<EnemyVisionOrient>(); 
         }
     }
-    public void EnemyyHacked()
+    public void EnemyHacked()
     {
         if (TryGetComponent(out PlayerInput input))
             return; 
@@ -35,11 +35,17 @@ public class EnemyHackedBehaviour : MonoBehaviour
         enemyInputAsset.Enable(); 
         enemyMove = gameObject.AddComponent(typeof (PlayerMove)) as PlayerMove;
         moveAction.started += enemyMove.OnMove;
-        moveAction.started += vision.OrientVision;
         moveAction.performed += enemyMove.OnMove;
-        moveAction.performed += vision.OrientVision;
-        moveAction.canceled += enemyMove.OnMove;
         moveAction.canceled += vision.OrientVision;
+        if (isConeVision)
+        {
+            moveAction.started += vision.OrientVision;
+            moveAction.performed += vision.OrientVision;
+            moveAction.canceled += enemyMove.OnMove;
+        }
+
+
+
         hackAction.started += EnemyUnHacked; 
     }
     public void EnemyUnHacked(InputAction.CallbackContext ctx)
