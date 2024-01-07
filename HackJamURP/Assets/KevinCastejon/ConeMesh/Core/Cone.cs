@@ -50,6 +50,7 @@ namespace KevinCastejon.ConeMesh
         public float ConeHeight { get => _coneHeight; set { _coneHeight = value; GenerateCone(); } }
         public ConeOrientation Orientation { get => _orientation; set { _orientation = value; GenerateCone(); } }
         public bool IsConeGenerated { get => _coneMesh != null; }
+        public bool InvertDirection { get => _invertDirection; set { _invertDirection = value; GenerateCone(); } }
         public bool IsTrigger
         {
             get => _isTrigger; set
