@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 644
     width: 1249
     height: 50
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 150}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 75
+  controlID: 74
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 32384}
   vertical: 0
-  controlID: 148
+  controlID: 71
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 32384}
   vertical: 1
-  controlID: 149
+  controlID: 72
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 150}
   m_MaxSize: {x: 16192, y: 24288}
   vertical: 0
-  controlID: 74
+  controlID: 73
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -347,8 +347,8 @@ MonoBehaviour:
     y: 0
     width: 263
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -464,7 +464,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -34960
+  m_LastSelectedObjectID: -6484
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -544,18 +544,18 @@ MonoBehaviour:
       y: 21
       width: 1247
       height: 132
-    m_Scale: {x: 0.2973505, y: 0.2973505}
-    m_Translation: {x: 623.5, y: 94.348976}
+    m_Scale: {x: 0.30152312, y: 0.30152315}
+    m_Translation: {x: 623.5, y: 59.902645}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2096.852
-      y: -317.29886
-      width: 4193.704
-      height: 443.92056
+      x: -2067.8347
+      y: -198.66682
+      width: 4135.6694
+      height: 437.77734
     m_MinimalGUI: 1
   m_defaultScale: 0.12222222
   m_LastWindowPixelSize: {x: 1247, y: 153}
@@ -601,10 +601,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 260}
-      m_SelectedIDs: 7077ffff
-      m_LastClickedID: -34960
-      m_ExpandedIDs: 846bffff2ef5ffffd4faffff
+      scrollPos: {x: 0, y: 244}
+      m_SelectedIDs: ace6ffff
+      m_LastClickedID: -6484
+      m_ExpandedIDs: 10ebffffd4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1037,9 +1037,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.090891, y: -2.862247, z: -30.016708}
+    m_Target: {x: -14.059525, y: 0.6281169, z: -27.591082}
     speed: 2
-    m_Value: {x: -8.090891, y: -2.862247, z: -30.016708}
+    m_Value: {x: -14.059525, y: 0.6281169, z: -27.591082}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1085,13 +1085,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3818519, y: 0.014275468, z: -0.0062900204, w: -0.92421615}
+    m_Target: {x: -0.32719123, y: -0.010906073, z: 0.0033648466, w: -0.9450114}
     speed: 2
-    m_Value: {x: -0.38180807, y: 0.01427383, z: -0.0062892986, w: -0.92411005}
+    m_Value: {x: -0.3271621, y: -0.008070063, z: 0.0023829842, w: -0.9449308}
   m_Size:
-    m_Target: 8.41994
+    m_Target: 4.3394356
     speed: 2
-    m_Value: 8.41994
+    m_Value: 4.15257
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1162,7 +1162,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Meshes/Angles/100x100
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1170,16 +1170,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Meshes/Angles/100x100
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\Nouveau dossier\PixelJam2024\HackJamURP
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 175}
-    m_SelectedIDs: a27c0000
-    m_LastClickedID: 31906
-    m_ExpandedIDs: 000000002875000038770000847700008677000092770000ee78000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 220}
+    m_SelectedIDs: c8760000
+    m_LastClickedID: 30408
+    m_ExpandedIDs: 00000000ea740000c4760000c6760000107700001e77000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1207,7 +1207,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000028750000
+    m_ExpandedIDs: 00000000ea740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
