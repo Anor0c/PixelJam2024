@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132c74b60427f5041b43664db2b7d824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hackerActionAsset: {fileID: -944628639613478452, guid: bb7816664d8394f478e28f6810c8f4af,
-    type: 3}
+  isConeVision: 1
+  vision: {fileID: 0}
 --- !u!1 &5963439879026079513
 GameObject:
   m_ObjectHideFlags: 0

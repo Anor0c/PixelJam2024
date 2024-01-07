@@ -14,7 +14,7 @@ public class HackManager : MonoBehaviour
     {
         foreach (EnemyHackedBehaviour _enemy in enemies)
         {
-            _enemy.EnemyyHacked(); 
+            _enemy.EnemyHacked(); 
         }
     }
 }
