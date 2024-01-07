@@ -39,7 +39,7 @@ public class PlayerMove : MonoBehaviour
         {
             inputDir.y = 0f;
         }
-        //Debug.Log(inputDir); 
+        //envoie la direction input par le joueur sur son clavier 
         OnInputDirection.Invoke(inputDir); 
     }
     private void Update()
