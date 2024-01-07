@@ -12,6 +12,7 @@ public class EnemyHackedBehaviour : MonoBehaviour
     private PlayerMove enemyMove;
     private InputAction moveAction, hackAction;
     [SerializeField] EnemyVisionOrient vision; 
+    [SerializeField] SwitchCamera cameraSwitch; 
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class EnemyHackedBehaviour : MonoBehaviour
         {
             vision = GetComponentInChildren<EnemyVisionOrient>(); 
         }
+        cameraSwitch = GetComponent<SwitchCamera>(); 
     }
     public void EnemyHacked()
     {
@@ -43,13 +45,11 @@ public class EnemyHackedBehaviour : MonoBehaviour
             moveAction.performed += vision.OrientVision;
             moveAction.canceled += enemyMove.OnMove;
         }
-
-
-
-        hackAction.started += EnemyUnHacked; 
+        hackAction.started += EnemyUnHacked;
     }
     public void EnemyUnHacked(InputAction.CallbackContext ctx)
     {
+        cameraSwitch.ToPlayerCamera();
         enemyInputAsset.Disable(); 
         if (enemyInputComponent != null)
             Destroy(GetComponent<PlayerInput>());

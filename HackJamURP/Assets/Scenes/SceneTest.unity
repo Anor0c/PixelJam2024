@@ -1714,8 +1714,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6810207090958983640, guid: 674d09dd70e818049842522f653fd953,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432356794367427478}
   m_SourcePrefab: {fileID: 100100000, guid: 674d09dd70e818049842522f653fd953, type: 3}
+--- !u!1 &1432356794367427477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6810207090958983640, guid: 674d09dd70e818049842522f653fd953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1432356794367427476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1432356794367427478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432356794367427477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62fc0d8f91bcd545b988c4712bd4696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  hackCamera: {fileID: 0}
 --- !u!1001 &1597256145757928444
 PrefabInstance:
   m_ObjectHideFlags: 0

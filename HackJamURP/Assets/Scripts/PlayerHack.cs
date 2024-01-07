@@ -7,13 +7,21 @@ using UnityEngine.InputSystem;
 public class PlayerHack : MonoBehaviour
 {
     [SerializeField] private float hitboxOffset = 1.0f;
-    [SerializeField]private bool isTryHack = false; 
-    [SerializeField]private bool isHackSuccess = false; 
+    [SerializeField] private bool isTryHack = false;
+    [SerializeField] private bool isHackSuccess = false;
+    [SerializeField] private SwitchCamera cameraSwitch; 
 
     public UnityEvent OnHackSuccessful;
- 
+    private void Start()
+    {
+        cameraSwitch = FindObjectOfType<SwitchCamera>(); 
+    }
     public void OnHack(InputAction.CallbackContext ctx)
     {
+        if (isHackSuccess)
+        {
+            return; 
+        }
         if (ctx.performed)
         {
             isTryHack = true;
@@ -34,13 +42,12 @@ public class PlayerHack : MonoBehaviour
     }
     private void OnTriggerStay(Collider _other)
     {
-        Debug.Log(_other);
-
         if (!isTryHack)
             return;
         else if (_other.gameObject.TryGetComponent(out EnemyHackedBehaviour _enemyHacked)) 
         {
-            Debug.Log("hack" + _enemyHacked); 
+            Debug.Log("hack" + _enemyHacked);
+            OnHackSuccessful.AddListener(cameraSwitch.ToHackCamera); 
             OnHackSuccessful.Invoke();
             isHackSuccess = true; 
         } 
