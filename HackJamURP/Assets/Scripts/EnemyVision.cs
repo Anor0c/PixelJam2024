@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EnemyVision : MonoBehaviour
 {
@@ -45,8 +46,16 @@ public class EnemyVision : MonoBehaviour
     {
         currentTimer = timeBetweenShots; 
     }
+    public void InputFire(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.started)
+            return; 
+        canon.forward = new Vector3(0, 0, 1);
+        Fire(); 
+    }
     public void Fire()
     {
+        Debug.Log("fire!!!!!!"); 
         Instantiate(bullet, canon.position, canon.rotation); 
     }
 }

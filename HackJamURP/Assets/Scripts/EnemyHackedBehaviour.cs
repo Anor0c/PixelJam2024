@@ -11,8 +11,9 @@ public class EnemyHackedBehaviour : MonoBehaviour
     private PlayerInput enemyInputComponent;
     private HackerInput enemyInputAsset; 
     private PlayerMove enemyMove;
-    private InputAction moveAction, hackAction;
-    [SerializeField] EnemyVisionOrient vision; 
+    private InputAction moveAction, hackAction, fireAction;
+    [SerializeField] EnemyVisionOrient visionOrient; 
+    [SerializeField] EnemyVision vision; 
     public UnityEvent OnUnHack; 
 
     private void Awake()
@@ -20,12 +21,14 @@ public class EnemyHackedBehaviour : MonoBehaviour
         enemyInputAsset = new HackerInput();
         moveAction = enemyInputAsset.Keyboard.Move; 
         hackAction = enemyInputAsset.Keyboard.Hack; 
+        fireAction = enemyInputAsset.Keyboard.Shoot; 
     }
     private void Start()
     {
+        vision = GetComponentInChildren<EnemyVision>(); 
         if (isConeVision)
         {
-            vision = GetComponentInChildren<EnemyVisionOrient>(); 
+            visionOrient = GetComponentInChildren<EnemyVisionOrient>(); 
         } 
     }
     public void EnemyHacked()
@@ -42,12 +45,14 @@ public class EnemyHackedBehaviour : MonoBehaviour
 
         if (isConeVision)
         {
-            moveAction.started += vision.OrientVision;
-            moveAction.performed += vision.OrientVision;
-            moveAction.canceled += vision.OrientVision;
+            moveAction.started += visionOrient.OrientVision;
+            moveAction.performed += visionOrient.OrientVision;
+            moveAction.canceled += visionOrient.OrientVision;
 
         }
         hackAction.started += EnemyUnHacked;
+        fireAction.started += vision.InputFire; 
+
     }
     public void EnemyUnHacked(InputAction.CallbackContext ctx)
     {

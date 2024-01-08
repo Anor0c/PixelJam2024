@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     public UnityEvent<Vector2> OnInputDirection;
