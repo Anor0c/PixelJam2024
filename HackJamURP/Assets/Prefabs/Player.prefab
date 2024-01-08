@@ -121,9 +121,34 @@ MonoBehaviour:
   hitboxOffset: 1.5
   isTryHack: 0
   isHackSuccess: 0
+  cameraSwitch: {fileID: 0}
   OnHackSuccessful:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: HackManager, Assembly-CSharp
+        m_MethodName: onAnyEnemyHacked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1204707919750196020}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2176945892561977727
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +438,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8c6804ac-6f06-488b-98f4-2dc9671e05c7
     m_ActionName: Keyboard/Hack[/Keyboard/shift,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c42b9c1a-1bcb-47e9-a170-dcd78d6131c8
+    m_ActionName: Keyboard/Shoot[/Mouse/leftButton,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5a32eee3-1a70-4d79-97c6-0a4cc4b370f9
+    m_ActionName: Keyboard/ReloadLevel[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Keyboard
@@ -433,6 +466,7 @@ MonoBehaviour:
   speed: 10
   gravity: 9.81
   deadZone: 0.8
+  enemy: {fileID: 0}
   OnInputDirection:
     m_PersistentCalls:
       m_Calls:

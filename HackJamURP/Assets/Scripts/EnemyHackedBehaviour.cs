@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class EnemyHackedBehaviour : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class EnemyHackedBehaviour : MonoBehaviour
     private PlayerMove enemyMove;
     private InputAction moveAction, hackAction;
     [SerializeField] EnemyVisionOrient vision; 
-    [SerializeField] SwitchCamera cameraSwitch; 
+    public UnityEvent OnUnHack; 
 
     private void Awake()
     {
@@ -25,31 +26,32 @@ public class EnemyHackedBehaviour : MonoBehaviour
         if (isConeVision)
         {
             vision = GetComponentInChildren<EnemyVisionOrient>(); 
-        }
-        cameraSwitch = GetComponent<SwitchCamera>(); 
+        } 
     }
     public void EnemyHacked()
     {
         if (TryGetComponent(out PlayerInput input))
-            return; 
-        enemyInputComponent= gameObject.AddComponent(typeof(PlayerInput)) as PlayerInput; 
+            return;
+        enemyInputComponent = gameObject.AddComponent(typeof(PlayerInput)) as PlayerInput;
         enemyInputComponent.notificationBehavior = PlayerNotifications.InvokeCSharpEvents;
-        enemyInputAsset.Enable(); 
-        enemyMove = gameObject.AddComponent(typeof (PlayerMove)) as PlayerMove;
+        enemyInputAsset.Enable();
+        enemyMove = gameObject.AddComponent(typeof(PlayerMove)) as PlayerMove;
         moveAction.started += enemyMove.OnMove;
         moveAction.performed += enemyMove.OnMove;
-        moveAction.canceled += vision.OrientVision;
+        moveAction.canceled += enemyMove.OnMove;
+
         if (isConeVision)
         {
             moveAction.started += vision.OrientVision;
             moveAction.performed += vision.OrientVision;
-            moveAction.canceled += enemyMove.OnMove;
+            moveAction.canceled += vision.OrientVision;
+
         }
         hackAction.started += EnemyUnHacked;
     }
     public void EnemyUnHacked(InputAction.CallbackContext ctx)
     {
-        cameraSwitch.ToPlayerCamera();
+        OnUnHack.Invoke(); 
         enemyInputAsset.Disable(); 
         if (enemyInputComponent != null)
             Destroy(GetComponent<PlayerInput>());

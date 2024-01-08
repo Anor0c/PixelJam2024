@@ -20,6 +20,7 @@ public class PlayerHack : MonoBehaviour
     {
         if (isHackSuccess)
         {
+            isTryHack = false; 
             return; 
         }
         if (ctx.performed)
@@ -29,6 +30,10 @@ public class PlayerHack : MonoBehaviour
         else
             isTryHack = false; 
 
+    }
+    public void OnUnHack()
+    {
+        isHackSuccess = false; 
     }
     public void HitboxOrientation(Vector2 _inputDir)
     {
