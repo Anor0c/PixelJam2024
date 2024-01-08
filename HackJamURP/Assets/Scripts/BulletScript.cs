@@ -19,18 +19,18 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(_other.gameObject);
             Destroy(gameObject);
-            Debug.Log(_other);
+            //Debug.Log(_other);
         }
         else if (_other.isTrigger)
         {
-            Debug.Log("1"); 
+            //Debug.Log("1"); 
             return;
         }
         else
         {
-            Debug.Log("3");
+            //Debug.Log("3");
             Destroy(gameObject);
         }
-        Debug.Log("4");
+        //Debug.Log("4");
     }
 }

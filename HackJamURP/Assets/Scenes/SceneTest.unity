@@ -301,6 +301,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -37.461, y: 89.968, z: -31.614}
+--- !u!114 &213387712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8123591147772943486, guid: e41f67d44a1c0a743802dc566d25d48e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6701797340386009195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &224689246
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +627,24 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &556658717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
+    type: 3}
+  m_PrefabInstance: {fileID: 2776234892147579538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a8bc6722ff55549bb71ac8a1927747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &556658718 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1204707919750196020, guid: d4281ada000ad5e419326dd992fe85da,
+    type: 3}
+  m_PrefabInstance: {fileID: 2776234892147579538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &722310946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1446,6 +1476,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 29.397, y: -60.134, z: 94.241}
+--- !u!114 &1933458929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5645080363218690254, guid: f34585e7c7102fa47aacf594d50f6adb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3943472622917956665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &2076515732
 Material:
   serializedVersion: 8
@@ -1714,8 +1756,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6810207090958983640, guid: 674d09dd70e818049842522f653fd953,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432356794367427478}
   m_SourcePrefab: {fileID: 100100000, guid: 674d09dd70e818049842522f653fd953, type: 3}
+--- !u!1 &1432356794367427477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6810207090958983640, guid: 674d09dd70e818049842522f653fd953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1432356794367427476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1432356794367427478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432356794367427477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62fc0d8f91bcd545b988c4712bd4696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1933458929}
+  hackCamera: {fileID: 213387712}
 --- !u!1001 &1597256145757928444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1902,39 +1968,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
       propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1346769091}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onAnyEnemyHacked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HackManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5814216525828701038, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2448,6 +2484,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
+        type: 3}
+      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 556658718}
+    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
+        type: 3}
+      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 556658717}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
