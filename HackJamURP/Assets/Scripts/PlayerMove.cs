@@ -16,8 +16,18 @@ public class PlayerMove : MonoBehaviour
 
     private Vector2 inputDir = Vector2.zero;
     private Vector3 FinalDir = Vector3.zero;
+    private Animator animator;
+
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public UnityEvent<Vector2> OnInputDirection;
+    
+  
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -25,23 +35,29 @@ public class PlayerMove : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
+
         if (!ctx.performed)
         {
             inputDir = Vector2.zero;
-            return; 
+            return;
         }
+
         inputDir = ctx.ReadValue<Vector2>().normalized;
         if (inputDir.x < deadZone && inputDir.x > -deadZone)
         {
-            inputDir.x = 0f; 
+            inputDir.x = 0f;
         }
         if (inputDir.y < deadZone && inputDir.y > -deadZone)
         {
             inputDir.y = 0f;
         }
+
+        animator.SetFloat("moveX", inputDir.x); /////////
+        animator.SetFloat("moveY", inputDir.y); ///////////////////
         //Debug.Log(inputDir); 
-        OnInputDirection.Invoke(inputDir); 
+        OnInputDirection.Invoke(inputDir);
     }
+
     private void Update()
     {
         FinalDir = new Vector3(inputDir.x, 0, inputDir.y)*speed*Time.deltaTime;
@@ -52,11 +68,11 @@ public class PlayerMove : MonoBehaviour
         else
         {
             FinalDir.y = 0f;
-        }
+        }      
     }
 
     void FixedUpdate()
     {
-        controller.Move(FinalDir); 
+        controller.Move(FinalDir);
     }
 }
