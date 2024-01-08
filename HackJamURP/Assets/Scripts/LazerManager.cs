@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LazerManager : MonoBehaviour
 {
-    [SerializeField] private LazerBehaviour[] lazersInScene;
+    /*[SerializeField] private LazerBehaviour[] lazersInScene;
     private void Start()
     {
         lazersInScene = FindObjectsOfType<LazerBehaviour>(); 
@@ -18,5 +18,5 @@ public class LazerManager : MonoBehaviour
                 l.gameObject.SetActive(false); 
             }
         }
-    }
+    }*/
 }

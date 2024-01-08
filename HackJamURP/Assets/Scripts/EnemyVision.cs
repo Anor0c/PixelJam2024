@@ -11,6 +11,8 @@ public class EnemyVision : MonoBehaviour
     [SerializeField] float currentTimer = 0f;
     [SerializeField] float visionDistance = 10f;
     [SerializeField] float visionAngle = 45f;
+    [SerializeField] float hitboxOffset = 1.5f;
+    Vector2 enemyDirection; 
     [SerializeField] PlayerMove target; 
     private void Start()
     {
@@ -46,12 +48,45 @@ public class EnemyVision : MonoBehaviour
     {
         currentTimer = timeBetweenShots; 
     }
+    public void OrientCanon(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed)
+        {
+            enemyDirection = Vector2.zero;
+        }
+        else
+        {
+            enemyDirection = ctx.ReadValue<Vector2>().normalized;
+        }
+
+
+
+        if (enemyDirection.x >= 0.9)
+        {
+            canon.forward = Vector3.MoveTowards(canon.position, Vector3.right, 100);
+            canon.localPosition = canon.forward * hitboxOffset;
+        }
+        else if (enemyDirection.y >= 0.9)
+        {
+            canon.localPosition = canon.forward * hitboxOffset;
+            canon.forward = Vector3.MoveTowards(canon.position, Vector3.up, 100);
+        }
+        else if (enemyDirection.x <= -0.9)
+        {
+            canon.localPosition = canon.forward * hitboxOffset;
+            canon.forward = Vector3.MoveTowards(canon.position, -Vector3.right, 100);
+        }
+        else if (enemyDirection.y <= -0.9)
+        {
+            canon.localPosition = canon.forward * hitboxOffset;
+            canon.forward = Vector3.MoveTowards(canon.position, -Vector3.up, 100);
+        }
+    }
     public void InputFire(InputAction.CallbackContext ctx)
     {
         if (!ctx.started)
-            return; 
-        canon.forward = new Vector3(0, 0, 1);
-        Fire(); 
+            return;
+        Fire();
     }
     public void Fire()
     {

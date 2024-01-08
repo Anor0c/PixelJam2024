@@ -42,6 +42,9 @@ public class EnemyHackedBehaviour : MonoBehaviour
         moveAction.started += enemyMove.OnMove;
         moveAction.performed += enemyMove.OnMove;
         moveAction.canceled += enemyMove.OnMove;
+        moveAction.started += vision.OrientCanon;
+        moveAction.performed += vision.OrientCanon;
+        moveAction.canceled += vision.OrientCanon;
 
         if (isConeVision)
         {

@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BulletScript : MonoBehaviour
 {
     [SerializeField] private float speed = 100f;
-    Rigidbody rb; 
+    Rigidbody rb;
+    GameObject UIDeath; 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,9 @@ public class BulletScript : MonoBehaviour
     {
         if (_other.gameObject.tag == "Player")
         {
-            Destroy(_other.gameObject);
+            Destroy(_other.gameObject.transform.parent.gameObject);
             Destroy(gameObject);
+            Instantiate(UIDeath); 
             //Debug.Log(_other);
         }
         else if (_other.isTrigger)

@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor; 
+using UnityEditor;
 [RequireComponent(typeof(SpriteRenderer))]
-[ExecuteInEditMode]
-public class LazerBehaviour : MonoBehaviour
-{
+public class LazerBehaviour : MonoBehaviour { }
+/*{
     [SerializeField] Sprite[] lazerSprites;
     [SerializeField] public LazerEnum lazerColor = LazerEnum.Red;
 
@@ -37,4 +36,4 @@ public class LazerBehaviourEditor : Editor
             lazer.SwitchSprite(_newColorEnum); 
         }
     }
-}
+}*/

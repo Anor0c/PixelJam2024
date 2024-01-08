@@ -12,7 +12,7 @@ public class ButtonScript : MonoBehaviour
  
     private void Awake()
     {
-        onButtonPressed.AddListener(FindObjectOfType<LazerManager>().OnAnyButtonPressed); 
+        //onButtonPressed.AddListener(FindObjectOfType<LazerManager>().OnAnyButtonPressed); 
     }
     public void ColorMesh(Color _color)
     {
