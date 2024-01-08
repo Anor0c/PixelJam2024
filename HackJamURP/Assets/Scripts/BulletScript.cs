@@ -15,7 +15,7 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider _other)
     {
-        if (_other.gameObject.GetComponentInParent<PlayerMove>()!=null)
+        if (_other.gameObject.tag == "Player")
         {
             Destroy(_other.gameObject);
             Destroy(gameObject);
