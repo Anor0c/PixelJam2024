@@ -627,12 +627,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!1 &556658715 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1853524720994081737, guid: d4281ada000ad5e419326dd992fe85da,
+--- !u!114 &556658717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
     type: 3}
   m_PrefabInstance: {fileID: 2776234892147579538}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a8bc6722ff55549bb71ac8a1927747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &556658718 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 1204707919750196020, guid: d4281ada000ad5e419326dd992fe85da,
@@ -1962,69 +1968,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
       propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1346769091}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 556658718}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onAnyEnemyHacked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HackManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Collider, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
-        type: 3}
-      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5814216525828701038, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2540,16 +2486,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
         type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
       propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 556658718}
@@ -2557,37 +2493,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 556658715}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Collider, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
-        type: 3}
-      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 556658717}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
