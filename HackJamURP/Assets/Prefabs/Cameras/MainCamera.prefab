@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8856130785897053280}
   - component: {fileID: 3209911906374562156}
   - component: {fileID: 8865130700343156251}
+  - component: {fileID: 1177791245009529690}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!20 &8957414878939018543
 Camera:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.649323
   orthographic: 0
-  orthographic size: 3.5
+  orthographic size: 3
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -172,3 +173,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1177791245009529690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810207090958983640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62fc0d8f91bcd545b988c4712bd4696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  hackCamera: {fileID: 0}

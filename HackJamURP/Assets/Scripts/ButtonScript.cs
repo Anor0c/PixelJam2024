@@ -16,7 +16,7 @@ public class ButtonScript : MonoBehaviour
     }
     public void ColorMesh(Color _color)
     {
-        GetComponent<MeshRenderer>().sharedMaterial.color = _color;
+        GetComponent<MeshRenderer>().material.color = _color;
     }
     private void OnTriggerEnter(Collider _collision)
     {
