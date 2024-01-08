@@ -591,6 +591,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2691d685ff49c6047aedd7692d73475d, type: 3}
+--- !u!114 &205728804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8123591147772943486, guid: e41f67d44a1c0a743802dc566d25d48e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1059062418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &241270798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5645080363218690254, guid: f34585e7c7102fa47aacf594d50f6adb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1234773099}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &275309853
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +628,7 @@ GameObject:
   - component: {fileID: 275309854}
   - component: {fileID: 275309857}
   - component: {fileID: 275309858}
+  - component: {fileID: 275309859}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -763,6 +788,20 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &275309859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275309853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62fc0d8f91bcd545b988c4712bd4696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 241270798}
+  hackCamera: {fileID: 205728804}
 --- !u!1 &315865924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +2966,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400011019}
     - target: {fileID: 5814216525828701038, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3485,6 +3529,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1400011019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2832368778421891863, guid: d63116b3af366b546a3c660faaa7d1dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1627971727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b20247459aa504485ced84dca757ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1431701283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3641,6 +3697,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c191179ca8c9fa548ac10c0f7b2833e8, type: 3}
+--- !u!114 &1455056826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1287365349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a8bc6722ff55549bb71ac8a1927747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1455056827 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1204707919750196020, guid: d4281ada000ad5e419326dd992fe85da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1287365349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1467325645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4913,6 +4987,16 @@ PrefabInstance:
       propertyPath: _coneRadius
       value: 1.54
       objectReference: {fileID: 0}
+    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
+        type: 3}
+      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1455056827}
+    - target: {fileID: 8556990626927484335, guid: cffa499e1537b4142a1801d58f05bdd1,
+        type: 3}
+      propertyPath: OnUnHack.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1455056826}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
