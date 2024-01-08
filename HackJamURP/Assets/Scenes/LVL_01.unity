@@ -2263,6 +2263,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c34ecd09faf3d5e4eb8b2fd398a2d0c8, type: 3}
+--- !u!114 &776506299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2832368778421891863, guid: d63116b3af366b546a3c660faaa7d1dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1627971727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b20247459aa504485ced84dca757ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &789159013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3861,6 +3873,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4354743153802169309, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: OnHackSuccessful.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 776506299}
     - target: {fileID: 5814216525828701038, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
       propertyPath: m_LocalPosition.x
