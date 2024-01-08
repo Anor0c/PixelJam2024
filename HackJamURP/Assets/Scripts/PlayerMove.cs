@@ -18,18 +18,11 @@ public class PlayerMove : MonoBehaviour
     private Vector3 FinalDir = Vector3.zero;
     private Animator animator;
 
-
-    private void Awake()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
-
     public UnityEvent<Vector2> OnInputDirection;
-    
-  
-
+ 
     void Start()
-    {
+    { 
+        animator = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController>();
     }
 
