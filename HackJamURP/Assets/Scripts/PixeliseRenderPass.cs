@@ -4,10 +4,10 @@ using UnityEngine.Rendering.Universal;
 
 public class PixeliseRenderPass : ScriptableRenderPass
 {
-    private int pixelBufferID = Shader.PropertyToID("_PixelBuffer");
+    private readonly int pixelBufferID = Shader.PropertyToID("_PixelBuffer");
     private int pixelScreenHeight, pixelScreenWidth; 
 
-    private PixeliseRendererFeature.CustomPassSettings settings;
+    private readonly PixeliseRendererFeature.CustomPassSettings settings;
     private Material mat; 
 
     private RenderTargetIdentifier colorBuffer, pixelBuffer; 
@@ -18,7 +18,8 @@ public class PixeliseRenderPass : ScriptableRenderPass
         this.renderPassEvent = _settings.renderPassEvent; 
         if (mat == null)
         {
-            mat = CoreUtils.CreateEngineMaterial("Hidden/Pixelize"); 
+           //mat = CoreUtils.CreateEngineMaterial("Universal Render Pipeline/Pixelize"); 
+            mat = Resources.Load<Material>("PixelMat");
         }
     }
     public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)

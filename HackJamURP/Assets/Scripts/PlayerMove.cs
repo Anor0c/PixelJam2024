@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        FinalDir = new Vector3(inputDir.x, 0, inputDir.y)*speed*Time.deltaTime;
+        FinalDir = speed * Time.deltaTime * new Vector3(inputDir.x, 0, inputDir.y);
         if (!controller.isGrounded)
         {
             FinalDir.y -= gravity;

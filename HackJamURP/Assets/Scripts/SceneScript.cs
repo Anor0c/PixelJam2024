@@ -21,4 +21,8 @@ public class SceneScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+    public void OnQuit()
+    {
+        Application.Quit();  
+    }
 }

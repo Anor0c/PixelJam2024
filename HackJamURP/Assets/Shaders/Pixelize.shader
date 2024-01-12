@@ -1,4 +1,4 @@
-Shader "Hidden/Pixelize"
+Shader "Universal Render Pipeline/Pixelize"
 {
     Properties
     {
