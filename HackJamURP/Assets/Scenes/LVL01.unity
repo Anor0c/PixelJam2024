@@ -5074,6 +5074,41 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[3].m_ActionName
       value: Keyboard/ReloadLevel[/Keyboard/r]
       objectReference: {fileID: 0}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1897513939}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToReloadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 951359564724420728, guid: d4281ada000ad5e419326dd992fe85da,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1853524720994081737, guid: d4281ada000ad5e419326dd992fe85da,
         type: 3}
       propertyPath: m_IsActive
@@ -8085,6 +8120,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193d92223052d554fae4610430ab2443, type: 3}
+--- !u!114 &1897513939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6356738921646919086, guid: 193d92223052d554fae4610430ab2443,
+    type: 3}
+  m_PrefabInstance: {fileID: 1897513938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2504de942f02f9f4485ad3a6a46f563c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1915731519
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerEnter(Collider _collision)
     {
 
-        if (_collision.gameObject.tag != "Player")
+        if (!_collision.gameObject.CompareTag("Player"))
             return;
         sceneManager.ToNextScene(); 
     }
